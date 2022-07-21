@@ -12,12 +12,6 @@ display: flex;
     align-items: center;
 }
 
-.item {
-
-    border: 1px solid grey;
-    width: 100%;
-    text-align: center;
-}
 .active {
     background-color: red;
 }

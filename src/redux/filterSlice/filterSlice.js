@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
 
+import { image, headline, text, overlay } from 'utils/icons';
 const AllElements = createSlice({
   name: 'AllElements',
   initialState: {
@@ -10,26 +11,28 @@ const AllElements = createSlice({
       {
         id: '1',
         title: 'img',
-        icon: 'icon path',
-        img: 'image path',
+        icon: image,
+        img: overlay,
       },
       {
         id: '2',
         title: 'button',
-        icon: 'icon path',
-        text: 'some text',
+        icon: image,
+        text: 'Register now',
       },
       {
         id: '3',
         title: 'headline',
-        icon: 'icon path',
-        text: 'some text',
+        icon: headline,
+        text: 'A legendary cap set that feels like new',
       },
       {
         id: '4',
         title: 'paragraph',
-        icon: 'icon path',
-        text: 'some text',
+        icon: text,
+        text: `Prompt your customer to revisit your store by showing them the products they left behind. Consider offering them a coupon code to close the deal.
+Using the "Insert" panel on the right, drag and drop 
+the Abandoned Cart element onto the page below.`,
       },
     ],
   },

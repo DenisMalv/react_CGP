@@ -10,7 +10,12 @@ import {
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
-export const CenterSideItem = ({ elem, isActiveElem, setIsActiveElem }) => {
+export const CenterSideItem = ({
+  elem,
+  isActiveElem,
+  setIsActiveElem,
+  onClick,
+}) => {
   const dispatch = useDispatch();
 
   const [isActiveInput, setIsActiveInput] = useState(null);
@@ -41,23 +46,24 @@ export const CenterSideItem = ({ elem, isActiveElem, setIsActiveElem }) => {
     setUpdatedText('');
     setIsActiveInput(null);
   };
-
+  console.log(elem.icon);
   return (
     <li
+      onClick={onClick}
       className={css.item}
       key={elem.id}
       title={elem.title}
-      style={{ height: 50 }}
+      style={{ minHeight: 50 }}
     >
-      <img src="" alt="qwe" width={10} />
+      <img src={elem.icon} alt="qwe" width={50} />
       <p>{elem.title}</p>
       {isActiveElem?.title === elem.title && (
-        <>
+        <div className={css.elementEditor}>
           <button onClick={() => handleUp(elem)}>up</button>
           <button onClick={() => handleDown(elem)}>down</button>
           <button onClick={() => handleDelete(elem)}>delete</button>
           <button onClick={() => handleEdit(elem)}>edit</button>
-        </>
+        </div>
       )}
       {isActiveInput?.title === elem.title && (
         <input

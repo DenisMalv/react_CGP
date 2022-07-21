@@ -14,12 +14,10 @@ export const RightSide = () => {
               className={css.item}
               key={elem.id}
               title={elem.title}
-              //   onClick={e => console.log(e.currentTarget.)}
-              //   onClick={onElemClick}
-              style={{ height: 50 }}
+              style={{ minHeight: 50 }}
             >
-              <p>{elem?.img}</p>
-              <p>{elem?.text}</p>
+              {elem?.img && <img src={elem.img} alt="qwe" />}
+              {elem?.text && <p>{elem.text}</p>}
             </li>
           ))}
         </ul>

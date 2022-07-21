@@ -1,10 +1,16 @@
 
 .item {
-
+position: relative;
     border: 1px solid grey;
     width: 100%;
     text-align: center;
+    margin-bottom: 30px;
 }
 .active {
     background-color: red;
+}
+.elementEditor{
+    position: absolute;
+    top:-22px;
+    right: 4px;
 }
