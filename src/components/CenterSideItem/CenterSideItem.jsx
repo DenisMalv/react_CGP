@@ -49,9 +49,10 @@ export const CenterSideItem = ({ elem, isActiveElem, setIsActiveElem }) => {
       title={elem.title}
       style={{ height: 50 }}
     >
+      <img src="" alt="qwe" width={10} />
+      <p>{elem.title}</p>
       {isActiveElem?.title === elem.title && (
         <>
-          <p>{elem.title}</p>
           <button onClick={() => handleUp(elem)}>up</button>
           <button onClick={() => handleDown(elem)}>down</button>
           <button onClick={() => handleDelete(elem)}>delete</button>
