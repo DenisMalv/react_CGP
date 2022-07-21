@@ -1,0 +1,13 @@
+.rightSideWrapper {
+    flex-grow: 5;
+            background-color: aliceblue;
+                border: 1px solid gray;
+                border-radius: 5px;
+}
+
+.rightSideList {
+display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+}

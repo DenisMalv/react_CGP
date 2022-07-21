@@ -1,0 +1,22 @@
+
+.leftSideWrapper {
+    flex-basis: 260px;
+        background-color: aliceblue;
+        border: 1px solid gray;
+            border-radius: 5px;
+}
+
+.leftSideList {
+    display: flex;
+        align-content: center;
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid grey;
+}

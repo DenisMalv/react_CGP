@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "img",
+    "icon": "icon path",
+    "img": "image path"
+  },
+  {
+    "id": "2",
+    "title": "button",
+    "icon": "icon path",
+    "text": "some text"
+  },
+  {
+    "id": "3",
+    "title": "headline",
+    "icon": "icon path",
+    "text": "some text"
+  },
+  {
+    "id": "4",
+    "title": "paragraph",
+    "icon": "icon path",
+    "text": "some text"
+  }
+]

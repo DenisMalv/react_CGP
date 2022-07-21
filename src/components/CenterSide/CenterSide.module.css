@@ -1,0 +1,23 @@
+.centerSideWrapper {
+    flex-basis: 500px;
+        background-color: aliceblue;
+            border: 1px solid gray;
+            border-radius: 5px;
+}
+
+.centerSideList {
+display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+}
+
+.item {
+
+    border: 1px solid grey;
+    width: 100%;
+    text-align: center;
+}
+.active {
+    background-color: red;
+}
