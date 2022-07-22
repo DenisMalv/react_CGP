@@ -26,7 +26,12 @@ export const CenterSide = () => {
   };
 
   return (
-    <div className={css.centerSideWrapper}>
+    <div
+      className={css.centerSideWrapper}
+      onDragOver={e => {
+        e.preventDefault();
+      }}
+    >
       {userProductsInBasket && (
         <ul className={css.centerSideList}>
           {userProductsInBasket.map(elem => (

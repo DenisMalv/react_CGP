@@ -32,8 +32,22 @@ padding: 30px;
 
 .item:hover{
     background-color: #D9E7FF;
+    cursor: pointer;
 }
 .item:active {
     background-color: #D9E7FF;
+    cursor: grab;
+}
+
+.dropNoActive {
+    cursor: no-drop;
+}
+
+.dragActive {
+    cursor: grabbing;
+}
+
+.dropActive {
+    cursor: cell
 }
 

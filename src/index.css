@@ -50,3 +50,12 @@ code {
 .active { 
   background-color: #D9E7FF;
 }
+/* .dropNoActive {
+  cursor: no-drop;
+}
+.dragActive {
+  cursor: grabbing;
+}
+.dropActive {
+  cursor: cell
+} */

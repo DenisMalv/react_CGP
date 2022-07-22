@@ -17,6 +17,12 @@ export const LeftSide = () => {
               key={elem.id}
               className={css.item}
               onClick={() => dispatch(addProductInBasket(elem))}
+              onDragEnd={e => {
+                if (e.clientX > 270 && e.clientX < 808) {
+                  dispatch(addProductInBasket(elem));
+                }
+              }}
+              draggable={true}
             >
               <img src={elem.icon} alt="qwe" width={25} />
               <p>{elem.title}</p>
