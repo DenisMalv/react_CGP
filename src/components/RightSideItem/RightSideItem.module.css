@@ -4,6 +4,7 @@ display: flex;
     flex-direction: column;
     list-style: none;
     align-items: center;
+
 }
 
 .headline{
@@ -11,10 +12,10 @@ font-weight: 700;
 font-size: 22px;
 }
 .paragraph{
-    font-weight: 400;
-        font-size: 14px;
-        color: #97AACD;
-        text-align: center;
+    color: #97AACD;
+    font-size: 14px;
+    text-align: center;
+        
 }
 .regButton{
     font-weight: 500;
@@ -26,4 +27,11 @@ font-size: 22px;
     border-radius: 4px;
     outline: none;
     border: none;
+                transition-property: background-color;
+                    transition-duration: 150ms;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.regButton:active {
+    background-color: #D9E7FF;
 }

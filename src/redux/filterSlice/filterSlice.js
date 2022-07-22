@@ -10,25 +10,25 @@ const AllElements = createSlice({
     ElementsList: [
       {
         id: '1',
-        title: 'img',
+        title: 'Img',
         icon: image,
         img: overlay,
       },
       {
         id: '2',
-        title: 'button',
+        title: 'Button',
         icon: image,
         text: 'Register now',
       },
       {
         id: '3',
-        title: 'headline',
+        title: 'Headline',
         icon: headline,
         text: 'A legendary cap set that feels like new',
       },
       {
         id: '4',
-        title: 'paragraph',
+        title: 'Paragraph',
         icon: text,
         text: `Prompt your customer to revisit your store by showing them the products they left behind. Consider offering them a coupon code to close the deal.
 Using the "Insert" panel on the right, drag and drop 

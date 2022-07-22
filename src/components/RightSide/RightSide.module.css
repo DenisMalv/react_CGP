@@ -1,5 +1,7 @@
 .rightSideWrapper {
-    flex-basis: 632px;
+    /* flex-basis: 632px; */
+    min-width: 632px;
+    padding: 30px;
 }
 
 .rightSideList {
@@ -7,6 +9,6 @@ display: flex;
     flex-direction: column;
     list-style: none;
     align-items: center;
-    padding: 30px;
+    
     gap: 30px;
 }

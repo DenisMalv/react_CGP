@@ -1,7 +1,8 @@
 .centerSideWrapper {
-    flex-basis: 538px;
+    /* flex-basis: 538px; */
+    min-width: 538px;
+    padding: 25px 30px;
     background-color: #F5F5FC;
-    border-right: 1px solid #E4E6F1;
     
 }
 
@@ -9,7 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 30px;
+    
     gap: 15px;
 
 }
+
+

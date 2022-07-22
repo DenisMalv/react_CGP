@@ -8,6 +8,16 @@
     width: 100%;
     border-radius: 6px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item:hover{
+background-color: #D9E7FF;
+}
+.item:active {
+    background-color: #D9E7FF;
 }
 
 .elementEditor{
