@@ -7,7 +7,6 @@ import { addProductInBasket } from 'redux/orderBasketSlice/orderBasketSlice';
 export const LeftSide = () => {
   const dispatch = useDispatch();
   const dataElements = useSelector(state => state.AllElements.ElementsList);
-  console.log('dataElements', dataElements);
 
   return (
     <div className={css.leftSideWrapper}>

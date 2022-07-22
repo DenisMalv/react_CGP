@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
 
 import { image, headline, text, overlay } from 'utils/icons';
+
 const AllElements = createSlice({
   name: 'AllElements',
   initialState: {
@@ -36,15 +37,10 @@ the Abandoned Cart element onto the page below.`,
       },
     ],
   },
-  reducers: {
-    // filterContact: (state, action) => {
-    //   state.AllElements = action.payload.text;
-    // },
-  },
+  reducers: {},
 });
 
-// export const { filterContact } = AllElements.actions;
-export const contactsSliceReducer = AllElements.reducer;
+export const AllElementsSliceReducer = AllElements.reducer;
 
 //ls
 const AllElementsPersistConfig = {
@@ -53,7 +49,7 @@ const AllElementsPersistConfig = {
 };
 export const persistedAllElementsReducer = persistReducer(
   AllElementsPersistConfig,
-  contactsSliceReducer
+  AllElementsSliceReducer
 );
 // Selectors
 export const getAllElements = state => state.AllElements;

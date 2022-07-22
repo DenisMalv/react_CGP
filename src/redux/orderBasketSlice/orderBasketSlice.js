@@ -10,7 +10,6 @@ const orderBasketSlice = createSlice({
   },
   reducers: {
     addProductInBasket: (state, action) => {
-      console.log(action);
       //------------------------------------------
       const findDuplicateProduct = state.userProducts.find(
         product => product.id === action.payload.id
@@ -22,7 +21,6 @@ const orderBasketSlice = createSlice({
       state.userProducts.push(action.payload);
     },
     deleteProductFromBasket: (state, action) => {
-      console.log(action);
       state.userProducts = state.userProducts.filter(
         product => product.id !== action.payload.id
       );
@@ -34,25 +32,19 @@ const orderBasketSlice = createSlice({
       if (elemIndex === 0) {
         return;
       }
-      console.log(state);
-      const a = state.userProducts.splice(elemIndex - 1, 1);
-      // console.log('a', a);
-      state.userProducts.splice(elemIndex, 0, a[0]);
+      const movableProduct = state.userProducts.splice(elemIndex - 1, 1);
+      state.userProducts.splice(elemIndex, 0, movableProduct[0]);
       console.log(elemIndex);
     },
     downProduct: (state, action) => {
       const elemIndex = state.userProducts.findIndex(
         el => el.id === action.payload.id
       );
-      console.log(elemIndex);
-      console.log(state.userProducts.length);
       if (elemIndex >= state.userProducts.length - 1) {
         return;
       }
-      console.log(state);
-      const a = state.userProducts.splice(elemIndex + 1, 1);
-      // console.log('a', a);
-      state.userProducts.splice(elemIndex, 0, a[0]);
+      const movableProduct = state.userProducts.splice(elemIndex + 1, 1);
+      state.userProducts.splice(elemIndex, 0, movableProduct[0]);
       console.log(elemIndex);
     },
     updateProductFromBasket: (state, action) => {
@@ -60,9 +52,6 @@ const orderBasketSlice = createSlice({
       const index = state.userProducts.findIndex(
         ({ id }) => id === action.payload.id
       );
-      const text = action.payload.text;
-      console.log({ index, text });
-      // console.log('state.userProducts[index]', state.userProducts[index]);
       if (action.payload.type === 'img') {
         state.userProducts[index] = {
           ...state.userProducts[index],
@@ -75,9 +64,6 @@ const orderBasketSlice = createSlice({
         text: action.payload.text,
       };
     },
-    resetProductInBasket: (state, action) => {
-      state.userProducts = action.payload;
-    },
   },
 });
 
@@ -85,7 +71,6 @@ export const {
   addProductInBasket,
   deleteProductFromBasket,
   updateProductFromBasket,
-  resetProductInBasket,
   upProduct,
   downProduct,
 } = orderBasketSlice.actions;

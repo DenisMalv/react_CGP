@@ -10,6 +10,7 @@ export const CenterSide = () => {
   const userProductsInBasket = useSelector(getUserProductsInBasket);
 
   const [isActiveElem, setIsActiveElem] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [_, setIsActiveInput] = useState(null);
 
   const onElemClick = e => {
@@ -17,8 +18,7 @@ export const CenterSide = () => {
     if (e.target.nodeName === 'BUTTON') {
       return;
     }
-    console.log('cur', e.currentTarget);
-    console.log('tar', e.target);
+
     allelem.forEach(elem => elem.classList.remove('active'));
     e.currentTarget.classList.add('active');
     setIsActiveElem(e.currentTarget);
