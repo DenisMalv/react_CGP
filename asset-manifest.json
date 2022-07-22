@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react_CGP/static/css/main.d7d5ac0f.css",
+    "main.js": "/react_CGP/static/js/main.a20d0aeb.js",
+    "static/js/207.3e884d48.chunk.js": "/react_CGP/static/js/207.3e884d48.chunk.js",
+    "static/media/Rectangle.jpg": "/react_CGP/static/media/Rectangle.37882883428f69ce407a.jpg",
+    "index.html": "/react_CGP/index.html",
+    "main.d7d5ac0f.css.map": "/react_CGP/static/css/main.d7d5ac0f.css.map",
+    "main.a20d0aeb.js.map": "/react_CGP/static/js/main.a20d0aeb.js.map",
+    "207.3e884d48.chunk.js.map": "/react_CGP/static/js/207.3e884d48.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7d5ac0f.css",
+    "static/js/main.a20d0aeb.js"
+  ]
+}
