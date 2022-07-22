@@ -13,8 +13,21 @@ export const CenterSide = () => {
   // eslint-disable-next-line no-unused-vars
   const [_, setIsActiveInput] = useState(null);
 
+  const onThroughClick = e => {
+    if (e.target.nodeName === 'UL') {
+      e.target.childNodes.forEach(elem => elem.classList.remove('active'));
+      setIsActiveElem(null);
+    }
+    if (e.target.nodeName === 'DIV') {
+      e.target.children[0].childNodes.forEach(elem =>
+        elem.classList.remove('active')
+      );
+      setIsActiveElem(null);
+    }
+  };
   const onElemClick = e => {
     const allelem = e.currentTarget.parentNode.childNodes;
+
     if (e.target.nodeName === 'BUTTON') {
       return;
     }
@@ -31,6 +44,7 @@ export const CenterSide = () => {
       onDragOver={e => {
         e.preventDefault();
       }}
+      onClick={onThroughClick}
     >
       {userProductsInBasket && (
         <ul className={css.centerSideList}>
