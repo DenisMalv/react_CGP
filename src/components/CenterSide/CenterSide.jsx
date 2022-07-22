@@ -11,18 +11,20 @@ export const CenterSide = () => {
 
   const [isActiveElem, setIsActiveElem] = useState(null);
   // eslint-disable-next-line no-unused-vars
-  const [_, setIsActiveInput] = useState(null);
+  const [isActiveInput, setIsActiveInput] = useState(null);
 
   const onThroughClick = e => {
     if (e.target.nodeName === 'UL') {
       e.target.childNodes.forEach(elem => elem.classList.remove('active'));
       setIsActiveElem(null);
+      setIsActiveInput(null);
     }
     if (e.target.nodeName === 'DIV') {
       e.target.children[0].childNodes.forEach(elem =>
         elem.classList.remove('active')
       );
       setIsActiveElem(null);
+      setIsActiveInput(null);
     }
   };
   const onElemClick = e => {
@@ -35,6 +37,7 @@ export const CenterSide = () => {
     allelem.forEach(elem => elem.classList.remove('active'));
     e.currentTarget.classList.add('active');
     setIsActiveElem(e.currentTarget);
+
     if (e.currentTarget !== isActiveElem) setIsActiveInput(null);
   };
 
@@ -54,6 +57,8 @@ export const CenterSide = () => {
               onClick={onElemClick}
               isActiveElem={isActiveElem}
               setIsActiveElem={setIsActiveElem}
+              isActiveInputUpper={isActiveInput}
+              setIsActiveInputUpper={setIsActiveInput}
               key={elem.id}
             />
           ))}

@@ -16,10 +16,11 @@ export const CenterSideItem = ({
   isActiveElem,
   setIsActiveElem,
   onClick,
+  isActiveInputUpper,
+  setIsActiveInputUpper,
 }) => {
   const dispatch = useDispatch();
 
-  const [isActiveInput, setIsActiveInput] = useState(null);
   const [updatedText, setUpdatedText] = useState('');
 
   const handleDelete = elem => {
@@ -29,10 +30,10 @@ export const CenterSideItem = ({
   const handleEdit = elem => {
     console.log(isActiveElem);
     setUpdatedText('');
-    if (isActiveInput) {
-      setIsActiveInput(null);
+    if (isActiveInputUpper) {
+      setIsActiveInputUpper(null);
     } else {
-      setIsActiveInput(elem);
+      setIsActiveInputUpper(elem);
     }
   };
   const handleUp = elem => {
@@ -45,9 +46,9 @@ export const CenterSideItem = ({
     console.log('submit');
     dispatch(updateProductFromBasket(data));
     setUpdatedText('');
-    setIsActiveInput(null);
+
+    setIsActiveInputUpper(null);
   };
-  // console.log(elem.icon);
   return (
     <li
       onClick={onClick}
@@ -81,7 +82,7 @@ export const CenterSideItem = ({
           </div>
         </div>
       )}
-      {isActiveInput?.title === elem.title && (
+      {isActiveInputUpper?.title === elem.title && (
         <label className={css.inputLabel}>
           <input
             className={css.input}
