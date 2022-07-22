@@ -19,7 +19,8 @@ export const LeftSide = () => {
               className={css.item}
               onClick={() => dispatch(addProductInBasket(elem))}
             >
-              {elem.title}
+              <img src={elem.icon} alt="qwe" width={25} />
+              <p>{elem.title}</p>
             </li>
           ))}
         </ul>

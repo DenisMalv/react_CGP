@@ -1,4 +1,5 @@
 import css from './RightSide.module.css';
+import { RightSideItem } from 'components/RightSideItem/RightSideItem';
 
 import { getUserProductsInBasket } from 'redux/orderBasketSlice/orderBasketSlice';
 import { useSelector } from 'react-redux';
@@ -8,17 +9,9 @@ export const RightSide = () => {
   return (
     <div className={css.rightSideWrapper}>
       {userProductsInBasket && (
-        <ul className={css.centerSideList}>
+        <ul className={css.rightSideList}>
           {userProductsInBasket.map(elem => (
-            <li
-              className={css.item}
-              key={elem.id}
-              title={elem.title}
-              style={{ minHeight: 50 }}
-            >
-              {elem?.img && <img src={elem.img} alt="qwe" />}
-              {elem?.text && <p>{elem.text}</p>}
-            </li>
+            <RightSideItem elem={elem} />
           ))}
         </ul>
       )}

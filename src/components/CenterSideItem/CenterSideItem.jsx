@@ -55,7 +55,7 @@ export const CenterSideItem = ({
       title={elem.title}
       style={{ minHeight: 50 }}
     >
-      <img src={elem.icon} alt="qwe" width={50} />
+      <img src={elem.icon} alt="qwe" width={25} />
       <p>{elem.title}</p>
       {isActiveElem?.title === elem.title && (
         <div className={css.elementEditor}>

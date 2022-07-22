@@ -1,9 +1,9 @@
 
 .leftSideWrapper {
-    flex-basis: 260px;
-        background-color: aliceblue;
-        border: 1px solid gray;
-            border-radius: 5px;
+    flex-basis: 270px;
+    padding: 30px;
+    border-right:  1px solid #E4E6F1;
+
 }
 
 .leftSideList {
@@ -16,7 +16,23 @@
 }
 
 .item {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
     width: 100px;
-    height: 100px;
-    border: 1px solid grey;
+    height: 83px;
+    background-color: #f6f9fe;
+    border-radius: 6px;
+    transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.item:hover{
+    background-color: #D9E7FF;
+}
+.item:active {
+    background-color: #D9E7FF;
 }
