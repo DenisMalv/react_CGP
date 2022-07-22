@@ -11,7 +11,7 @@ export const RightSide = () => {
       {userProductsInBasket && (
         <ul className={css.rightSideList}>
           {userProductsInBasket.map(elem => (
-            <RightSideItem elem={elem} />
+            <RightSideItem elem={elem} key={elem.id} />
           ))}
         </ul>
       )}

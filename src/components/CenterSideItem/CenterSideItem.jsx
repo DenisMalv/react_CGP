@@ -1,4 +1,5 @@
 import css from './CenterSideItem.module.css';
+import { deleteSvg, editSvg, arrowSvg } from 'utils/icons';
 
 import {
   updateProductFromBasket,
@@ -46,7 +47,7 @@ export const CenterSideItem = ({
     setUpdatedText('');
     setIsActiveInput(null);
   };
-  console.log(elem.icon);
+  // console.log(elem.icon);
   return (
     <li
       onClick={onClick}
@@ -59,29 +60,47 @@ export const CenterSideItem = ({
       <p>{elem.title}</p>
       {isActiveElem?.title === elem.title && (
         <div className={css.elementEditor}>
-          <button onClick={() => handleUp(elem)}>up</button>
-          <button onClick={() => handleDown(elem)}>down</button>
-          <button onClick={() => handleDelete(elem)}>delete</button>
-          <button onClick={() => handleEdit(elem)}>edit</button>
+          <div className={css.upDownWrapper}>
+            <button className={css.btnDown} onClick={() => handleDown(elem)}>
+              {arrowSvg}
+            </button>
+            <button className={css.btnUp} onClick={() => handleUp(elem)}>
+              {arrowSvg}
+            </button>
+          </div>
+          <div className={css.editDeleteWrapper}>
+            <button className={css.btnEdit} onClick={() => handleEdit(elem)}>
+              {editSvg}
+            </button>
+            <button
+              className={css.btnDelete}
+              onClick={() => handleDelete(elem)}
+            >
+              {deleteSvg}
+            </button>
+          </div>
         </div>
       )}
       {isActiveInput?.title === elem.title && (
-        <input
-          type="text"
-          onChange={e => setUpdatedText(e.currentTarget.value)}
-          value={updatedText}
-          title={elem.title}
-          onKeyDown={e => {
-            if (e.key === 'Enter') {
-              handlesubmit({
-                type: elem.title,
-                id: elem.id,
-                text: updatedText,
-              });
-            }
-          }}
-          //
-        />
+        <label className={css.inputLabel}>
+          <input
+            className={css.input}
+            type="text"
+            onChange={e => setUpdatedText(e.currentTarget.value)}
+            value={updatedText}
+            title={elem.title}
+            onKeyDown={e => {
+              if (e.key === 'Enter') {
+                handlesubmit({
+                  type: elem.title,
+                  id: elem.id,
+                  text: updatedText,
+                });
+              }
+            }}
+            //
+          />
+        </label>
       )}
     </li>
   );
