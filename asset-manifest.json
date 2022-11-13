@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react_CGP/static/css/main.b0a1cc21.css",
-    "main.js": "/react_CGP/static/js/main.1f9a7f3d.js",
+    "main.css": "/react_CGP/static/css/main.0cca78ad.css",
+    "main.js": "/react_CGP/static/js/main.312ba763.js",
     "static/js/207.3e884d48.chunk.js": "/react_CGP/static/js/207.3e884d48.chunk.js",
     "static/media/Rectangle.jpg": "/react_CGP/static/media/Rectangle.37882883428f69ce407a.jpg",
     "index.html": "/react_CGP/index.html",
-    "main.b0a1cc21.css.map": "/react_CGP/static/css/main.b0a1cc21.css.map",
-    "main.1f9a7f3d.js.map": "/react_CGP/static/js/main.1f9a7f3d.js.map",
+    "main.0cca78ad.css.map": "/react_CGP/static/css/main.0cca78ad.css.map",
+    "main.312ba763.js.map": "/react_CGP/static/js/main.312ba763.js.map",
     "207.3e884d48.chunk.js.map": "/react_CGP/static/js/207.3e884d48.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0a1cc21.css",
-    "static/js/main.1f9a7f3d.js"
+    "static/css/main.0cca78ad.css",
+    "static/js/main.312ba763.js"
   ]
 }
