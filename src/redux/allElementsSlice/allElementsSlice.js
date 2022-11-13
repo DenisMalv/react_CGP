@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
@@ -10,25 +10,25 @@ const AllElements = createSlice({
   initialState: {
     ElementsList: [
       {
-        id: '1',
+        id: nanoid(2),
         title: 'Img',
         icon: image,
         img: overlay,
       },
       {
-        id: '2',
+        id: nanoid(2),
         title: 'Button',
         icon: image,
         text: 'Register now',
       },
       {
-        id: '3',
+        id: nanoid(2),
         title: 'Headline',
         icon: headline,
         text: 'A legendary cap set that feels like new',
       },
       {
-        id: '4',
+        id: nanoid(2),
         title: 'Paragraph',
         icon: text,
         text: `Prompt your customer to revisit your store by showing them the products they left behind. Consider offering them a coupon code to close the deal.

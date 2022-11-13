@@ -9,5 +9,5 @@ export const Container = styled.div`
 
 export const MainContentWraper = styled.div`
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 `;

@@ -5,7 +5,7 @@ export const AppBar = () => {
     <AppBarContainer>
       <Navigation>
         <NavigationText to="/">
-          <span>REACT EDITOR Test</span>
+          <span>REACT EDITOR</span>
         </NavigationText>
       </Navigation>
     </AppBarContainer>

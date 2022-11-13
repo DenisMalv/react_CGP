@@ -11,12 +11,12 @@ const orderBasketSlice = createSlice({
   reducers: {
     addProductInBasket: (state, action) => {
       //------------------------------------------
-      const findDuplicateProduct = state.userProducts.find(
-        product => product.id === action.payload.id
-      );
-      if (findDuplicateProduct) {
-        return;
-      }
+      // const findDuplicateProduct = state.userProducts.find(
+      //   product => product.id === action.payload.id
+      // );
+      // if (findDuplicateProduct) {
+      //   return;
+      // }
       //------------------------------------------
       state.userProducts.push(action.payload);
     },
@@ -52,16 +52,16 @@ const orderBasketSlice = createSlice({
       const index = state.userProducts.findIndex(
         ({ id }) => id === action.payload.id
       );
-      if (action.payload.type === 'img') {
+      if (action.payload.type !== 'Img') {
         state.userProducts[index] = {
           ...state.userProducts[index],
-          img: action.payload.text,
+          text: action.payload.text,
         };
         return;
       }
       state.userProducts[index] = {
         ...state.userProducts[index],
-        text: action.payload.text,
+        img: action.payload.text,
       };
     },
   },

@@ -21,19 +21,18 @@ export const CenterSideItem = ({
 }) => {
   const dispatch = useDispatch();
 
-  const [updatedText, setUpdatedText] = useState('');
+  const [updatedText, setUpdatedText] = useState(elem.text || elem.img);
 
   const handleDelete = elem => {
     dispatch(deleteProductFromBasket(elem));
     setIsActiveElem(null);
   };
-  const handleEdit = elem => {
-    console.log(isActiveElem);
-    setUpdatedText('');
+  const handleEdit = elem => {    
+    // setUpdatedText('');
     if (isActiveInputUpper) {
       setIsActiveInputUpper(null);
     } else {
-      setIsActiveInputUpper(elem);
+      setIsActiveInputUpper(elem.id);
     }
   };
   const handleUp = elem => {
@@ -45,7 +44,7 @@ export const CenterSideItem = ({
   const handlesubmit = data => {
     console.log('submit');
     dispatch(updateProductFromBasket(data));
-    setUpdatedText('');
+    // setUpdatedText('');
 
     setIsActiveInputUpper(null);
   };
@@ -55,11 +54,12 @@ export const CenterSideItem = ({
       className={css.item}
       key={elem.id}
       title={elem.title}
+      id={elem.id}
       style={{ minHeight: 50 }}
     >
       <img src={elem.icon} alt="icon" width={25} />
       <p>{elem.title}</p>
-      {isActiveElem?.title === elem.title && (
+      {isActiveElem === elem.id && (
         <div className={css.elementEditor}>
           <div className={css.upDownWrapper}>
             <button className={css.btnDown} onClick={() => handleDown(elem)}>
@@ -82,7 +82,7 @@ export const CenterSideItem = ({
           </div>
         </div>
       )}
-      {isActiveInputUpper?.title === elem.title && (
+      {isActiveInputUpper === elem.id && (
         <label className={css.inputLabel}>
           <input
             className={css.input}

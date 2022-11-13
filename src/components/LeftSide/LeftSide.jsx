@@ -3,6 +3,7 @@ import css from './LeftSide.module.css';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { addProductInBasket } from 'redux/orderBasketSlice/orderBasketSlice';
+import { nanoid } from '@reduxjs/toolkit';
 
 export const LeftSide = () => {
   const dispatch = useDispatch();
@@ -16,13 +17,15 @@ export const LeftSide = () => {
             <li
               key={elem.id}
               className={css.item}
-              onClick={() => dispatch(addProductInBasket(elem))}
-              onDragEnd={e => {
-                if (e.clientX > 270 && e.clientX < 808) {
-                  dispatch(addProductInBasket(elem));
-                }
-              }}
-              draggable={true}
+              onClick={() => dispatch(addProductInBasket({...elem,id:elem.id + nanoid(2)}))}
+              // onDragEnd={e => {
+                // console.log('X', e);
+                // if (e.clientX > 270 && e.clientX < 808) {
+
+                // dispatch(addProductInBasket(elem));
+                // }
+              // }}
+              // draggable={true}
             >
               <img src={elem.icon} alt="qwe" width={25} />
               <p>{elem.title}</p>

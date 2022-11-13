@@ -34,11 +34,14 @@ export const CenterSide = () => {
       return;
     }
 
-    allelem.forEach(elem => elem.classList.remove('active'));
+    allelem.forEach(elem =>{
+		elem.classList.remove('active');
+		// setIsActiveElem(elem)
+	});
     e.currentTarget.classList.add('active');
-    setIsActiveElem(e.currentTarget);
+    setIsActiveElem(e.currentTarget.id);
 
-    if (e.currentTarget !== isActiveElem) setIsActiveInput(null);
+    if (e.currentTarget.id !== isActiveElem) setIsActiveInput(null);
   };
 
   return (
